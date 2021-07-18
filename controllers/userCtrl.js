@@ -63,7 +63,7 @@ const userCtrl = {
                 maxAge: 24 * 60 * 60 * 1000 // 24h
             })
 
-            res.json({ msg: "Login successful, Now you can cast your vote!" })
+            res.json({ msg: "Login successful, Now you can cast your vote!", refresh_token })
 
         } catch (err) {
             return res.status(500).json({ msg: err.message })
