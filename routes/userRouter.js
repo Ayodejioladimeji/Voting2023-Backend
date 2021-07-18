@@ -18,8 +18,6 @@ router.get('/infor', auth, userCtrl.getUser)
 
 router.post('/reset', userCtrl.resetPassword)
 
-// router.delete('/delete/:id', auth, authAdmin, userCtrl.deleteUser)
-
 
 
 module.exports = router
