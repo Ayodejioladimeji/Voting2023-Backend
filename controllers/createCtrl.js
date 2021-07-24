@@ -64,7 +64,9 @@ const createCrtl = {
         return res.status(400).json({msg: "Please fill in all fields"})
 
         const user = await User.findOne({identity})
-            if(!user) return res.status(400).json({msg: "Please Provide the NIN you used to register this account"})
+            if(!user) {
+                return res.status(400).json({msg: "Please Provide the NIN you used to register this account"})
+            }
 
         const voter = await Vote.findOne({ identity })
         if (voter){

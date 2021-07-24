@@ -11,4 +11,4 @@ router.get('/all_voters', auth, createCtrl.allVoters)
 
 
 
-module.exports = router
+module.exports = router;
