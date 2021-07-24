@@ -164,13 +164,14 @@ const userCtrl = {
 
     // The section of the reset password
     resetPassword: async (req, res) => {
-        console.log(req.body)
         try {
             const { password } = req.body
 
             const passwordHash = await bcrypt.hash(password, 12)
 
-            await Users.findOneAndUpdate({ password }, {
+            console.log(Users)
+
+            await Users.findOneAndUpdate({ _id: req.user.id }, {
                 password: passwordHash
             })
 
